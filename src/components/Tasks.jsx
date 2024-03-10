@@ -23,10 +23,9 @@ function Tasks({ props, index, moveTask, updateTasksOrder, sectionIndex }) {
     return (
         <Container ref={(node) => ref(drop(node))} >
             <Title>{props}</Title>
-            <Icons>
-                <Link to={`/task/${sectionIndex}/${index}`} style={{ textDecoration: 'none', color: 'inherit' }}></Link>
-                    <MdEdit/>
-            </Icons>
+            
+                <Link to={`/task/${sectionIndex}/${index}`} style={{ textDecoration: 'none', color: 'inherit' }}><MdEdit/></Link>     
+           
         </Container>
     );
 }
@@ -53,15 +52,4 @@ const Title = styled.h3`
     font-weight: 500;
     color: #000;
     margin: 0;
-`;
-
-const Icons = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50px;
-    font-size: 1.5em;
-    color: #555;
-    margin-left: 10px;
-    cursor: pointer;
 `;
